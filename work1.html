@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-600">
+     <h1 class="text-center font-extrabold text-violet-400">Theme Changer</h1>
+    <div class="flex space-x-1.5 justify-center items-center mt-10">
+        <div class="h-[30px] w-[30px] bg-blue-500 button" id="blue"></div>
+        <div class="h-[30px] w-[30px] bg-red-500 button" id="red"></div>
+        <div class="h-[30px] w-[30px] bg-green-500 button" id="green"></div>
+    </div>
+</body>
+<script>
+    const body = document.querySelector('body');
+    const btn = document.querySelectorAll('.button');
+    //anonymous passed as an arguments
+    btn.forEach(function(x){
+        x.addEventListener('click',function(e){
+            if(e.target.id ==="blue"){
+                body.style.backgroundColor = 'grey';
+            }
+            if(e.target.id =="red"){
+                body.style.backgroundColor = 'red';
+            }
+            if(e.target.id =="green"){
+                body.style.backgroundColor = 'green';
+            }
+        });
+    });
+</script>
+</html>
